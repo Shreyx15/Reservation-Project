@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const session = require('express-session');
+require('dotenv').config();
+
 //MONGODB CONNECTION
 mongoose.set("strictQuery", false);
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect("mongodb+srv://Shreyx15:shrey2002@cluster0.8cux0ks.mongodb.net/ReservationDB?retryWrites=true&w=majority");
 
 
 const corsOptions = {
@@ -15,7 +17,6 @@ const corsOptions = {
 };
 //MIDDLEWARES
 app.use(express.json());
-require('dotenv').config();
 app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use(session({
