@@ -1,0 +1,156 @@
+.Header {
+    background-color: #003580;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.headerContainer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0 100px 0px;
+}
+
+.no-margin {
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0 0px 0px;
+}
+
+.HeaderList {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.headerListItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerListItem.active {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.headerDesc {
+    margin: 20px 0;
+}
+
+.headerTitle {
+    font-size: 48px;
+}
+
+.headerDesc {
+    font-size: 24px;
+}
+
+.headerSearch {
+    height: 30px;
+    background-color: white;
+    border: 3px solid rgb(255, 183, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -25px;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 1024px;
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 7px;
+
+}
+
+.headerBtn {
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.logout {
+    background-color: rgb(255, 255, 255);
+    color: rgb(65, 123, 205);
+    width: 90px;
+    height: fit-content;
+    border: 2px solid rgb(65, 123, 205);
+    padding: 7px;
+    margin-left: 230px;
+}
+
+.headerSearchItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.headerSearchInput {
+    border: none;
+    outline: none;
+}
+
+.headerSearchText {
+    color: lightgray;
+    cursor: pointer;
+}
+
+.date {
+    position: absolute;
+    top: 50px;
+
+}
+
+.options {
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+}
+
+.optionItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.optionCounter {
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.optionCounterButton {
+    height: 40px;
+    width: 40px;
+    border: 0;
+    border-radius: 5px;
+    color: rgba(0, 0, 255, 0.589);
+    font-size: larger;
+    cursor: pointer;
+    background-color: white;
+}
+
+.optionCounterButton:hover:not(:disabled) {
+    background-color: rgba(113, 113, 113, 0.225);
+}
+
+
+.optionCounterButton:disabled {
+    cursor: not-allowed;
+}
