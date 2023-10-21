@@ -6,7 +6,7 @@ const cors = require('cors');
 const session = require('express-session');
 //MONGODB CONNECTION
 mongoose.set("strictQuery", false);
-mongoose.connect('mongodb+srv://Shreyx15:shrey2002@cluster0.8cux0ks.mongodb.net/ReservationDB?retryWrites=true&w=majority');
+mongoose.connect(process.env.MONGODB_URI);
 
 
 const corsOptions = {
