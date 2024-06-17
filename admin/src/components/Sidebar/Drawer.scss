@@ -1,0 +1,32 @@
+.listItemBtn:hover {
+    border-radius: 10px;
+}
+
+.listItemBtn.dark:hover {
+    background-color: rgba(52, 52, 255, 0.953);
+}
+
+.drawer .MuiDrawer-paper {
+    box-sizing: border-box;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 10px;
+    background-color: #f9fafb;
+    height: 100vh;
+    overflow-y: hidden !important;
+    color: black;
+}
+
+.drawer.dark .MuiDrawer-paper {
+    background-color: black;
+    color: white;
+    // overflow: hidden !important;
+}
+
+
+@media only screen and (max-width:960px) {
+    .drawer .MuiDrawer-paper {
+        position: fixed !important;
+        top: 56px;
+        padding-top: 0 !important;
+    }
+}

@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.navbar {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #003580;
+}
+
+.navContainer {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navItems {
+    position: relative;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navButton {
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.mini-profile {
+    height: 40px;
+    width: 40px;
+}
+
+.mini-profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.profile-options {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 2;
+    border-radius: 2px;
+    right: 0px;
+}
+
+.p-link>p {
+    padding: 12px;
+}
+
+.p-option:hover {
+    background-color: rgba(0, 0, 0, 0.103);
+}
+
+.p-link {
+    text-decoration: none;
+    color: black;
+}
+
+.p-option {
+    cursor: pointer;
+}

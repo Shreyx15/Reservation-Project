@@ -1,29 +1,41 @@
 const router = require('express').Router();
-const { createUser, createUsers, upadateUser, deleteUser, getUser, getAllUsers, addSubscription } = require('../controllers/user');
+const { createUser, createUsers, updateUser, deleteUser, getUser, getAllUsers, addSubscription, updateBookings, cancelUserBooking, getUserBookings } = require('../controllers/user');
 const { verifyToken, verifyUser, verifyAdmin } = require('../utils/verifyToken');
+const multer = require('multer');
 
 router.get("/checkAuthentication", verifyToken, (req, res, next) => {
     res.send("you are authenticated!");
 });
 
-//REGISTER USER
-router.post("/", createUser);
+const storage = multer.memoryStorage();
 
-//POST USERS ARRAY
-router.post("/insertMany", createUsers);
+const upload = multer({
+    storage: storage,
+    limits: {
+        fileSize: 100 * 1024 * 1024, // 100 MB (for individual files)
+        fieldSize: 10 * 1024 * 1024 // 10 MB (for text fields)
+    }
+});
 
-//UPDATE USER
-router.put("/:id", verifyUser, upadateUser);
 
-//DELETE USER
-router.delete("/:id", verifyUser, deleteUser);
+router.post("/register", [verifyToken, verifyAdmin], upload.single('image'), createUser);
 
-//GET USER
-router.get("/:id", verifyUser, getUser);
+router.post("/insertMany", verifyToken, createUsers);
 
-//GET ALL THE USERS
-router.get("/", verifyAdmin, getAllUsers);
+router.put("/updateUser", [verifyToken, verifyAdmin], upload.single('image'), updateUser);
 
-router.post("/addSubscription", addSubscription);
+router.delete("/:id", [verifyToken, verifyAdmin], deleteUser);
+
+router.get("/:id", verifyToken, getUser);
+
+router.get("/", verifyToken, getAllUsers);
+
+router.post("/addSubscription", verifyToken, addSubscription);
+
+router.put("/update_bookings", verifyToken, updateBookings);
+
+router.get("/bookings/getUserBookings/:id", verifyToken, getUserBookings);
+
+router.delete("/bookings/cancelUserBooking/:userId/:bookingId", cancelUserBooking);
 
 module.exports = router;

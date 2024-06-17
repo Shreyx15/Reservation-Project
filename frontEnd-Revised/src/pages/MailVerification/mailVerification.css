@@ -1,0 +1,17 @@
+.mail-verfification-container {
+    height: 100vh;
+}
+
+.mail-verification {
+    display: flex;
+    flex-direction: column !important;
+    font-size: 25px;
+    font-weight: bold;
+    gap: 25px;
+}
+
+.mail-verification-title {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}

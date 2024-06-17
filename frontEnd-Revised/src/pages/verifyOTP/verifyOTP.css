@@ -1,0 +1,12 @@
+.otp-container {
+    height: 100vh;
+}
+
+.otp {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 25px;
+    font-size: 25px;
+    font-weight: bold;
+}

@@ -1,17 +1,25 @@
 const router = require('express').Router();
-const { createRoom, createRooms, upadateRoom, deleteRoom, getRoom, getAllRooms, getRoomByHotelId } = require("../controllers/room");
-const { verifyAdmin, verifyUser } = require("../utils/verifyToken");
+const { createRoom, createRooms, upadateRoom, deleteRoom, getRoom, getAllRooms, assignHotel, getSelectedRooms } = require("../controllers/room");
+const { verifyAdmin, verifyUser, verifyToken } = require("../utils/verifyToken");
+const multer = require('multer');
 
-router.post("/:hotelId", verifyAdmin, createRoom);
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
-router.post("/insertMany", createRooms);
+router.post("/createRoom", [verifyToken, verifyAdmin], upload.single('image'), createRoom);
 
-router.put("/:id", verifyAdmin, upadateRoom);
+router.post("/insertMany", [verifyToken, verifyAdmin], createRooms);
 
-router.delete("/:id", verifyAdmin, deleteRoom);
+router.post("/assignHotel", [verifyToken, verifyAdmin], assignHotel);
 
-router.get("/:id", getRoom);
+router.put("/:roomId", [verifyToken, verifyAdmin], upload.single('image'), upadateRoom);
 
-router.get("/", getAllRooms);
+router.delete("/:id", [verifyToken, verifyAdmin], deleteRoom);
+
+router.get("/:id", verifyToken, getRoom);
+
+router.get("/", verifyToken, getAllRooms);
+
+router.post("/get_selected_rooms", [verifyToken, verifyAdmin], getSelectedRooms);
 
 module.exports = router;

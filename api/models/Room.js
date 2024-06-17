@@ -14,11 +14,26 @@ const RoomSchema = mongoose.Schema({
         required: true
     },
     desc: {
+        type: String,  
+        required: true
+    },
+    img: {
         type: String,
         required: true
     },
-    roomNumbers: [{ number: Number, unavailableDates: { type: [Date] } }],
-}, { timestamps: true });
-
+    roomNumbers: [
+        {
+            number: Number,
+            unavailableDates: { type: [Date], default: [] }
+        }
+    ],
+    associatedHotel: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Hotel',
+    }
+},
+    {
+        timestamps: true
+    });
 
 module.exports = mongoose.model('Room', RoomSchema);

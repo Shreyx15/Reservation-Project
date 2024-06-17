@@ -1,0 +1,25 @@
+.user-reg-container {
+    height: 100vh;
+}
+
+.user-register {
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column !important;
+    gap: 35px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
+.reg-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register-title {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+}

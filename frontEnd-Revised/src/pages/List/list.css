@@ -1,0 +1,123 @@
+.listContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.listWrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+}
+
+.listSearch {
+    flex: 1;
+    background-color: #febb02;
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+}
+
+.SearchMapContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.mapController {
+    height: 200px;
+    width: 270px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: inset rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+.mapImage {
+    height: auto;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.mapBtn {
+    position: absolute !important;
+}
+
+.lsTitle {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.lsItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.lsItem>label {
+    font-size: 12px;
+}
+
+.lsItem>input {
+    height: 30px;
+    padding: 5px;
+    border: none;
+}
+
+.lsItem>span {
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dateRange {
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+}
+
+.listResult {
+    flex: 3;
+}
+
+.lsOptions {
+    padding: 12px;
+}
+
+.lsOptionItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 12px;
+}
+
+.lsOptionInput {
+    width: 50px;
+}
+
+.listSearch>button {
+    padding: 10px;
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+}

@@ -1,0 +1,70 @@
+.loginContainer-user {
+    height: 100vh;
+}
+
+.lContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-login {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 50px;
+    border-radius: 10px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 25px !important;
+}
+
+.user-login-title {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.login-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    margin-top: 50px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.gIconContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    right: 0;
+}
+
+.gIcon {
+    padding: 5px;
+}
+
+.gIcon:hover {
+    background-color: rgba(0, 0, 0, 0.126);
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 5px;
+    color: rgb(24, 24, 249);
+}
+
+.signUpText {
+    color: blue;
+    font-size: 12px;
+    margin-left: 130px;
+}
+
+.signUpText:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
