@@ -1,5 +1,5 @@
-/Frontend
+# Ignore node_modules directories
+**/node_modules/
 
-/node_modules
-
-.env
+# Ignore .env files
+**/.env
