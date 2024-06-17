@@ -1,0 +1,44 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    78.79377365112305,
+                    30.123748754600438
+                ]
+            },
+            "properties": {
+                "address": "KHIRSU, 246147 Pauri, India – Great location -",
+                "city": "pauri",
+                "country": "India",
+                "crawl_date": "2016-09-01",
+                "hotel_brand": "",
+                "hotel_description": "Khirsu By GMVN offers accommodation in Pauri. Each room has a TV and offers views of the mountains. Some rooms have a seating area where you can relax. Rooms have a private bathroom. Khirsu By GMVN features free WiFi . You will find room service at the property. The hotel also offers car hire. The nearest airport is Jolly Grant Airport, 59 km from Khirsu By GMVN.",
+                "hotel_facilities": "Bathroom:Toilet paper|Linen|Towels|Bathroom|Toilet•Bedroom:Wardrobe/Closet•View:Mountain view|View•Room Amenities:Clothes rack•Pets:Pets are not allowed.•Living Area:Seating Area|Desk•Media & Technology:Satellite Channels|TV•Food & Drink:Breakfast in the room•Internet:Free!\nWiFi is available in public areas and is free of charge.•Parking:Free!\nFree public parking is possible on site (reservation is not needed).•Services:Daily maid service|Shuttle service (surcharge)|Wake-up service|Car hire|Room service•General:Designated smoking area|Non-smoking throughout|Tile/Marble floor|Heating|Fan|Non-smoking rooms|Newspapers",
+                "hotel_star_rating": "",
+                "image_count": 3,
+                "locality": "",
+                "pageurl": "http://www.booking.com/hotel/in/khirsu-by-gmvn.en-gb.html?label=gen173nr-15CAsobEIadGhlLWxlZWxhLXBhbGFjZS1iYW5nYWxvcmVIM2IFbm9yZWZobIgBAZgBLrgBBMgBBNgBA-gBAfgBAw;sid=f341da5cb268bae3ab8d5a82ed66e21f;dcid=4;checkin_monthday=01&checkin_year_month=2016-12&checkout_monthday=02&checkout_year_month=2016-12&do_availability_check=1&sb_price_type=total&type=total&group_adults=2;selected_currency=INR;changed_currency=allowed_duration = 27000",
+                "property_id": 1742658,
+                "property_name": "Khirsu By GMVN",
+                "property_type": "204",
+                "province": "",
+                "qts": "2016-09-01 11:52:38 +0000",
+                "room_count": 18,
+                "room_type": "Economy Double Room",
+                "similar_hotel": "Hotel Mandakini",
+                "site_review_count": "",
+                "site_review_rating": null,
+                "site_stay_review_rating": "",
+                "sitename": "http://www.booking.com/",
+                "special_tag": "Share",
+                "state": "Uttarakhand",
+                "uniq_id": "a5ea72415f8007fcbe65759830fdd3d9",
+                "zone": ""
+            }
+        }
+    ]
+}

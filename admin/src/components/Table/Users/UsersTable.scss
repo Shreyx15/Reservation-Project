@@ -1,0 +1,83 @@
+// #tableContainer {
+//     display: flex;
+//     justify-content: center;
+// }
+
+#usersTable {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+th {
+    text-align: left;
+}
+
+td {
+    width: auto;
+}
+
+#image {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+#btnCell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.table-btnContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.linkToSingleUser {
+    background-color: white;
+    text-decoration: none;
+}
+
+.hrRow {
+    height: 1px;
+}
+
+hr.hr {
+    border: 0;
+    height: 0.9px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+@media only screen and (max-width: 768px) {
+    #tableContainer {
+        margin-left: 20px;
+        overflow-x: auto;
+    }
+
+    .actionBtn {
+        height: 30px !important;
+        width: 10px !important;
+    }
+
+    .table-btnContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+    td {
+        padding: 7px;
+    }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    td {
+        padding-right: 10px;
+    }
+}

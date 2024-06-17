@@ -1,0 +1,118 @@
+.grid_container {
+    padding: 7px;
+    position: relative;
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px 20px 30px 20px;
+}
+
+.titleText {
+    padding: 10px;
+    color: black;
+}
+
+.profile_content {
+    margin-top: 12px;
+    padding: 10px 20px 20px 20px;
+}
+
+.userImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 3px solid rgba(110, 110, 255, 0.273);
+    box-sizing: border-box;
+}
+
+.imgEdit {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.iconForImg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px;
+    margin-top: 10px !important;
+    padding-left: 10px;
+}
+
+.info-text {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icons {
+    font-size: 18px !important;
+    opacity: 0.5 !important;
+}
+
+
+.editIcon {
+    background-color: rgba(0, 0, 255, 0.3);
+    border-radius: 100px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.buttonsContainer {
+    padding: 10px !important;
+}
+
+.btn:nth-child(1) {
+    margin-right: 10px !important;
+}
+
+
+@media only screen and (max-width: 1180px) {
+    .imgContainer {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+//Deleted options css
+// .options {
+//     display: flex;
+// }
+
+// .option {
+//     background-color: rgba(0, 0, 0, 0.197);
+//     padding: 5px 15px;
+// }
+
+// .option:hover {
+//     cursor: pointer;
+// }
+
+// .opt_profile {
+//     border-top-left-radius: 10px;
+//     border-top-right-radius: 10px;
+// }
+
+// .opt_update {
+//     border-top-right-radius: 10px;
+//     border-top-left-radius: 10px;
+// }
+
+// .active {
+//     background-color: white;
+// }

@@ -1,0 +1,121 @@
+.mapContainer {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    height: 80%;
+    width: 80%;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#hereMap {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.closeIconMap {
+    z-index: 3 !important;
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    font-size: 30px !important;
+    color: rgba(0, 0, 0, 0.5) !important;
+    cursor: pointer;
+}
+
+.closeIconMap:hover {
+    background-color: rgba(0, 0, 0, 0.486);
+    border-radius: 100px;
+    padding: 3px;
+    color: white !important;
+}
+
+.hotelInMap {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgInMap {
+    height: 150px;
+    width: 150px;
+}
+
+.hotelNameInMap {
+    font-size: 18px !important;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.hotelNameInMap:visited {
+    color: black;
+}
+
+.imgInMap:hover {
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.hotelNameInMap:hover {
+    text-decoration: underline;
+    color: blue !important;
+}
+
+.textInMap {
+    width: 90px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.ratingInMap {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.rInMap {
+    font-weight: bold;
+    background-color: rgba(30, 30, 251, 0.666);
+    border-radius: 3px;
+    padding: 0 5px;
+    color: white;
+}
+
+.rInMap_text {}
+
+.mapBtnContainer {
+    display: flex;
+    direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.mapBtnDir {
+    background-color: rgba(23, 23, 249, 0.642);
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dir-icon {
+    font-size: 15px;
+}
+
+.mapBtnDir:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.infoBubbleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

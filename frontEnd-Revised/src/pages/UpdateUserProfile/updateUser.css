@@ -1,0 +1,95 @@
+.profileContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 35px;
+}
+
+
+.titleContaineruser-Edit {
+    display: flex;
+    justify-content: center !important;
+    position: relative;
+    margin: 35px 0 50px 0;
+    padding-left: 50px;
+}
+
+.title-text-editUser {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 30px;
+}
+
+.updateUserProfile {
+    width: 1024px !important;
+    height: 580px !important;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+}
+
+.common-div {
+    margin-top: 80px !important;
+}
+
+
+.editProfileImgInputContainer {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.editProfile-img-container {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.editProfile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.editProfile-edit-icon {
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.504);
+    color: white;
+    padding: 5px;
+    border-radius: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    right: 15px;
+    bottom: 13px;
+    border: 1px solid black;
+}
+
+.editProfileForm {
+    display: flex;
+    flex-direction: column !important;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-text-editUser {
+    font-style: 36px;
+    margin-left: 50px;
+}
+
+.submitBtn-edit-user {
+    position: absolute !important;
+    right: 50px;
+    bottom: 40px;
+}

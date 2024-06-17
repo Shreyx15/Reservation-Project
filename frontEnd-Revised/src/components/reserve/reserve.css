@@ -1,0 +1,113 @@
+.reserve {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.419);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rContainer {
+    background-color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.rItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 20px;
+}
+
+.rInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Title {
+    font-weight: 5000;
+}
+
+.rDesc {
+    font-weight: 300;
+}
+
+.rMax {
+    font-size: 12px;
+}
+
+.rPrice {
+    font-weight: 500;
+}
+
+.rButton {
+    border: none;
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.rClose {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.725);
+}
+
+
+.roomContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.room {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.room>label {
+    font-size: 11px;
+}
+
+.room>input {
+    transform: scale(1.5);
+}
+
+.selectedRooms {
+    display: flex;
+    columns: white;
+    gap: 5px;
+}
+
+.seletedNumber {
+    color: black;
+    width: fit-content;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.296);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 47px;
+    padding: 3px;
+    /* padding: 3px 7px; */
+}
+
+.selectedClose {
+    font-size: 15px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.807);
+}
