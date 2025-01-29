@@ -64,7 +64,7 @@ const NewUser = () => {
                     return;
                 }
 
-                const res = await axios.post("/users/register", formData);
+                const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/users/register`, formData);
                 console.log(res.data);
 
 

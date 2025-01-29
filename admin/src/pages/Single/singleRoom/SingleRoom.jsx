@@ -95,7 +95,7 @@ const SingleRoom = () => {
             const name = public_id_arr[2].split('.')[0];
             const public_id = public_id_arr[0] + '/' + public_id_arr[1] + '/' + name;
 
-            const res = await axios.put(`/rooms/${roomId}?public_id=${public_id}`, dataToBeSubmitted);
+            const res = await axios.put(`${process.env.BACKEND_HOSTED_URL}/rooms/${roomId}?public_id=${public_id}`, dataToBeSubmitted);
 
             if (res.status === 200 || Math.floor(res.status / 100) === 2) {
                 Swal.fire({

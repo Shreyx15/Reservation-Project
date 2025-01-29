@@ -92,7 +92,7 @@ const NewHotel = () => {
         }
         console.log(formData);
 
-        const res = await axios.post("/hotels", formData);
+        const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/hotels`, formData);
 
         Swal.fire({
             icon: 'success',

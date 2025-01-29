@@ -25,7 +25,7 @@ const UsersTable = ({ id, user, email }) => {
         });
 
         if (result.isConfirmed) {
-            const res = await axios.delete(`/users/${userId}`);
+            const res = await axios.delete(`${process.env.BACKEND_HOSTED_URL}/users/${userId}`);
             console.log(res.status);
 
             Swal.fire(

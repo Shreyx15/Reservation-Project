@@ -85,7 +85,7 @@ const SingleUser = () => {
                     const dotIndex = str.indexOf('.');
                     const public_id = str.substring(0, dotIndex);
 
-                    const res = await axios.put(`/users/updateUser?id=${userInfo._id}&public_id=${public_id}`, userInfo);
+                    const res = await axios.put(`${process.env.BACKEND_HOSTED_URL}/users/updateUser?id=${userInfo._id}&public_id=${public_id}`, userInfo);
                     console.log(res.data);
                     return res;
                 }

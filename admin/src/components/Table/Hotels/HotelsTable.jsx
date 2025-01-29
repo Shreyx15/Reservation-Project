@@ -26,7 +26,7 @@ const HotelsTable = () => {
         });
 
         if (result.isConfirmed) {
-            const res = await axios.delete(`/hotels/${hotelId}`);
+            const res = await axios.delete(`${process.env.BACKEND_HOSTED_URL}/hotels/${hotelId}`);
             console.log(res.status);
 
             Swal.fire(

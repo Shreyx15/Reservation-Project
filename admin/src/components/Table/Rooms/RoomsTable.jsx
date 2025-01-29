@@ -26,7 +26,7 @@ const RoomsTable = () => {
                     continue;
                 }
                 try {
-                    const hotel = await axios.get(`/hotels/find/${room.associatedHotel}`);
+                    const hotel = await axios.get(`${process.env.BACKEND_HOSTED_URL}/hotels/find/${room.associatedHotel}`);
                     names.push(hotel.data.name);
                 } catch (error) {
                     console.error(error);
@@ -83,7 +83,7 @@ const RoomsTable = () => {
 
         if (response.isConfirmed) {
             try {
-                const res = await axios.get(`/rooms/${roomId}`);
+                const res = await axios.get(`${process.env.BACKEND_HOSTED_URL}/rooms/${roomId}`);
 
                 if (res.status === 200 || Math.floor(res.status / 100) === 2) {
                     Swal.fire(

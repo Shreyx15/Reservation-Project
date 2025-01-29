@@ -59,7 +59,7 @@ function Header({ type }) {
         }
 
         const fetchSuggestions = async () => {
-            const res = await axios.get(`/hotels/getSearchResults${destination ? '?query=' + destination : ''}`);
+            const res = await axios.get(`${process.env.BACKEND_HOSTED_URL}/hotels/getSearchResults${destination ? '?query=' + destination : ''}`);
             const { data, status } = res;
 
             return status == 200 && data.length > 0 ? data : [];
@@ -129,7 +129,7 @@ function Header({ type }) {
                     return;
                 }
 
-                const res = await axios.post("/auth/logout", { isGoogleLogin: auth.isGoogleLogin });
+                const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/logout`, { isGoogleLogin: auth.isGoogleLogin });
                 const { status } = res;
 
                 if (status == 200) {

@@ -166,7 +166,7 @@ const Reserve = ({ id, openModal, setOpenModal, hotel }) => {
     //         return;
     //     }
 
-    //     const result = await axios.post("/payment/orders", { amount: hotel?.cheapestPrice });
+    //     const result = await axios.post(`${process.env.BACKEND_HOSTED_URL}/payment/orders`, { amount: hotel?.cheapestPrice });
     //     const { data } = result;
 
     //     if (!result) {
@@ -217,7 +217,7 @@ const Reserve = ({ id, openModal, setOpenModal, hotel }) => {
     //                 throw new Error(error.message);
     //             }
 
-    //             // const update_payment = await axios.post(`/payment/success`, paymentData);
+    //             // const update_payment = await axios.post(`${process.env.BACKEND_HOSTED_URL}/payment/success`, paymentData);
 
     //         },
     //         theme: {
@@ -253,7 +253,7 @@ const Reserve = ({ id, openModal, setOpenModal, hotel }) => {
                 }
             };
 
-            const res = await axios.put('/users/update_bookings', config);
+            const res = await axios.put(`${process.env.BACKEND_HOSTED_URL}/users/update_bookings`, config);
             const { data, status } = res;
 
             return res;
@@ -277,7 +277,7 @@ const Reserve = ({ id, openModal, setOpenModal, hotel }) => {
                         }
                     }
 
-                    const res = await axios.put(`/hotels/book?id=${id}&roomNumber=${checkbox.dataset.val}&startDate=${startDate}&endDate=${endDate}&roomid=${checkbox.value}`, config);
+                    const res = await axios.put(`${process.env.BACKEND_HOSTED_URL}/hotels/book?id=${id}&roomNumber=${checkbox.dataset.val}&startDate=${startDate}&endDate=${endDate}&roomid=${checkbox.value}`, config);
 
                     const { data, status } = res;
 

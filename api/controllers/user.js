@@ -323,7 +323,7 @@ module.exports.cancelUserBooking = async (req, res, next) => {
         await Promise.all(promises);
 
 
-        res.status(200).json(response);  
+        res.status(200).json(response);
 
     } catch (error) {
         throw new Error(error);

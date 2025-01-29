@@ -27,9 +27,8 @@ const Login = () => {
                 'Content-Type': 'application/json'
             };
 
-            const res = await axios.post('/auth/login', formData, { headers });
+            const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/login`, formData, { headers });
             const { data, status } = res;
-            console.log(data);
             if (status == 200 || Math.floor(status / 100) == 2) {
                 const { user, token } = data;
 

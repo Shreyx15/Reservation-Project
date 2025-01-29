@@ -39,7 +39,7 @@ const getToken = async () => {
 const verifyFirebaseToken = async () => {
     const token = await auth.currentUser.getIdToken(true);
 
-    const res = await axios.post('/auth/checkAuthentication', { token, isGoogleLogin: true });
+    const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/checkAuthentication`, { token, isGoogleLogin: true });
     const { data } = res;
 
     return data.isLoggedIn;
@@ -49,7 +49,7 @@ const handleFirebaseLogout = (dispatch) => {
     signOut(auth)
         .then(async () => {
             const token = localStorage.getItem('token');
-            const res = await axios.post("/auth/logout", { token, isGoogleLogin: true });
+            const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/logout`, { token, isGoogleLogin: true });
             const { status } = res;
             if (status === 200) {
                 const action = {

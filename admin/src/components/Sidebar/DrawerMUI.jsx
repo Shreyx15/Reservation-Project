@@ -57,7 +57,7 @@ const DrawerMUI = () => {
                 const body = {
                     token: authState.token
                 };
-                const res = await axios.post('/auth/logout', body, { withCredentials: true });
+                const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/logout`, body, { withCredentials: true });
 
                 if (res.status == 200) {
                     Swal.fire({

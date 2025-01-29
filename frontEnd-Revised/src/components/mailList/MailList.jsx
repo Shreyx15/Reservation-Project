@@ -6,7 +6,7 @@ const MailList = () => {
     const [email, setEmail] = useState("");
     const handleClick = async () => {
         try {
-            const res = await axios.post("/users/addSubscription", { email: email });
+            const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/users/addSubscription`, { email: email });
             console.log(res);
         } catch (error) {
             console.error(error);

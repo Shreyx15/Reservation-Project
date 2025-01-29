@@ -25,7 +25,7 @@ const MiniTabForRooms = () => {
         const fetchData = async () => {
             try {
                 const selectedRoomIds = dataState.selectedRooms;
-                const response = await axios.post("/rooms/get_selected_rooms", { data: selectedRoomIds });
+                const response = await axios.post(`${process.env.BACKEND_HOSTED_URL}/rooms/get_selected_rooms`, { data: selectedRoomIds });
                 setRooms(response.data);
                 if (rooms.length > 0) {
                     const action = {
@@ -76,7 +76,7 @@ const MiniTabForRooms = () => {
                     roomData: dataState.selectedRooms
                 };
                 console.log(dataToBeSent.roomData);
-                const res = await axios.post("/rooms/assignHotel", { data: dataToBeSent });
+                const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/rooms/assignHotel`, { data: dataToBeSent });
 
                 if (res.status === 200 || Math.floor(res.status / 100) === 2) {
                     Swal.fire({

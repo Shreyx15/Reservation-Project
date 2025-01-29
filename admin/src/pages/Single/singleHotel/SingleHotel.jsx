@@ -86,7 +86,7 @@ const SingleHotel = () => {
             const public_id = arr.splice(resIndex).join('/').slice(0, -4);
             console.log(public_id + "\n");
             console.log(arr[6]);
-            const res = await axios.delete(`/hotels/deleteImage?id=${data._id}&public_id=${public_id}&image_id=${arr[6]}`);
+            const res = await axios.delete(`${process.env.BACKEND_HOSTED_URL}/hotels/deleteImage?id=${data._id}&public_id=${public_id}&image_id=${arr[6]}`);
 
             if (res.status == 200 || res.status / 100 == 2) {
                 Swal.fire(
@@ -121,7 +121,7 @@ const SingleHotel = () => {
             })
 
             if (response.isConfirmed) {
-                const res = await axios.put(`/hotels/update/${data._id}?CITY=${data.city}&NAME=${data.name}`, formData);
+                const res = await axios.put(`${process.env.BACKEND_HOSTED_URL}/hotels/update/${data._id}?CITY=${data.city}&NAME=${data.name}`, formData);
 
                 if (res.status === 200 || res.status / 100 === 2) {
                     Swal.fire({

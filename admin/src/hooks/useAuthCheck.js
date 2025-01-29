@@ -38,7 +38,7 @@ const useAuthCheck = (authDispatch) => {
             };
 
 
-            const res = await axios.post("/auth/checkAuthentication", { token });
+            const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/checkAuthentication`, { token });
             const { data, status } = res;
 
             if (status == 200 && data.isLoggedIn) {

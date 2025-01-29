@@ -34,6 +34,7 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
+    "redux": "^5.0.1",
     "sweetalert2": "^11.7.29",
     "sweetalert2-react-content": "^5.0.7",
     "web-vitals": "^2.1.4"
@@ -62,7 +63,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8000/api",
   "devDependencies": {
     "dotenv": "^16.4.5"
   }

@@ -12,7 +12,7 @@ const MailVerification = () => {
     const handleClick = async () => {
 
         try {
-            const res = await axios.post('/auth/mailVerification', { email });
+            const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/mailVerification`, { email });
             const { data, status } = res;
 
             if (!data.success) {

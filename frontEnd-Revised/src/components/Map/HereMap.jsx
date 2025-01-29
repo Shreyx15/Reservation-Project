@@ -19,7 +19,7 @@ const HereMap = ({ closeIconClick, mapOpen, center }) => {
             'https://js.api.here.com/v3/3.1/mapsjs-mapevents.js',
         ];
 
-        const res = await axios.get('/hotels/getAllHotels');
+        const res = await axios.get(`${process.env.BACKEND_HOSTED_URL}/hotels/getAllHotels`);
 
         const { data: hotels, status } = res;
         if (status == 200 || Math.floor(status / 100) == 2) {

@@ -56,7 +56,7 @@ const UpdateUserProfile = () => {
                     public_id = str.substring(0, dotIndex);
                 }
 
-                const res = await axios.put(`/users/updateUser?id=${userFromAuth?._id}${public_id ? '&public_id=' + public_id : ''}`, submit_data);
+                const res = await axios.put(`${process.env.BACKEND_HOSTED_URL}/users/updateUser?id=${userFromAuth?._id}${public_id ? '&public_id=' + public_id : ''}`, submit_data);
                 const { data, status } = res;
 
                 if (status == 200) {

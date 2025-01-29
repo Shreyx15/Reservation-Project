@@ -96,7 +96,7 @@ const NewRoom = () => {
             }
 
 
-            const res = await axios.post('/rooms/createRoom', room_form_data);
+            const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/rooms/createRoom`, room_form_data);
 
             if (res.status === 200 || Math.floor(res.status / 100) === 2) {
                 const resp = await Swal.fire({

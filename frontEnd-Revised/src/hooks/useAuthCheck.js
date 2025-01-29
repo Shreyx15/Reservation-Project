@@ -52,7 +52,7 @@ const useAuthCheck = () => {
                     handleTokenExpired();
                 }
             } else {
-                const res = await axios.post('/auth/checkAuthentication', { token, isGoogleLogin });
+                const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/checkAuthentication`, { token, isGoogleLogin });
                 const { data, status } = res;
 
                 if (status !== 200 || status === 401) {

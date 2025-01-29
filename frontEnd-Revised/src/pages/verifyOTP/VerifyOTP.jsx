@@ -13,7 +13,7 @@ const VerifyOTP = () => {
     // console.log(email);
 
     const verifyOTP = async () => {
-        const res = await axios.post('/auth/verifyOTP', { email, otp });
+        const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/verifyOTP`, { email, otp });
         const { success } = res.data;
 
         if (!success) {

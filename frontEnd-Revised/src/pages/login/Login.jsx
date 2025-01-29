@@ -29,7 +29,7 @@ const Login = () => {
         dispatch({ type: "LOGIN_START" });
 
         try {
-            const res = await axios.post("/auth/login", credentials);
+            const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/login`, credentials);
             console.log(res.data);
             const { data } = res;
             const payload = {
@@ -61,7 +61,7 @@ const Login = () => {
                 user
             };
 
-            const login_res = await axios.post("/auth/login", body);
+            const login_res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/login`, body);
             const { status, data } = login_res;
             if (status == 200) {
                 action.type = "LOGIN_SUCCESS";

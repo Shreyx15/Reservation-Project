@@ -40,7 +40,7 @@ const Register = () => {
 
         if (user_response.isConfirmed) {
             try {
-                const res = await axios.post('/auth/register', credentials);
+                const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/register`, credentials);
 
                 const { data, status } = res;
 

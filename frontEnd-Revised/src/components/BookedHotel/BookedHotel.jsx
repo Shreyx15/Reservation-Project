@@ -31,7 +31,7 @@ const BookedHotel = ({ data }) => {
             });
 
             if (confirmation.isConfirmed) {
-                const res = await axios.delete(`/users/bookings/cancelUserBooking/${userId}/${bookingId}`);
+                const res = await axios.delete(`${process.env.BACKEND_HOSTED_URL}/users/bookings/cancelUserBooking/${userId}/${bookingId}`);
                 const { data, status } = res;
 
                 if (status == 200) {

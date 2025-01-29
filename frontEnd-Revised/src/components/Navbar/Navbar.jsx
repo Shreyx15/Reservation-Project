@@ -31,7 +31,7 @@ function Navbar() {
                     return;
                 }
 
-                const res = await axios.post("/auth/logout", { isGoogleLogin: auth.isGoogleLogin });
+                const res = await axios.post(`${process.env.BACKEND_HOSTED_URL}/auth/logout`, { isGoogleLogin: auth.isGoogleLogin });
                 const { status } = res;
 
                 if (status == 200) {

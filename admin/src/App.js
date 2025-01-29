@@ -12,7 +12,6 @@ import NewHotel from "./pages/Single/NewHotel/NewHotel";
 import SingleRoom from "./pages/Single/singleRoom/SingleRoom";
 import NewRoom from "./pages/Single/NewRoom/NewRoom";
 import { AuthContextProvider } from "./context/AuthContext";
-import { ToastContainer } from 'react-toastify';
 import Login from "./pages/Login/Login";
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
